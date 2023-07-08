@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BasicCar : MonoBehaviour
 {
-    private float health = 5;
     private float acceleration = 0f;
-    private float deacceleration = 0.00005f;
+    private float deacceleration = 0.4f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +19,8 @@ public class BasicCar : MonoBehaviour
     {
         if(acceleration != 0)
         {
-            transform.position = transform.position + new Vector3(0,acceleration);
-            acceleration -= deacceleration;
+            transform.position = transform.position + new Vector3(0,acceleration) * Time.deltaTime;
+            acceleration -= Math.Sign(acceleration) * deacceleration * Time.deltaTime;
             if (acceleration < deacceleration && acceleration > -deacceleration)
             {
                 acceleration = 0f;

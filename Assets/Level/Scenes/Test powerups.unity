@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3680592970456576281, guid: 7484482fbc581d14a83a483648308a24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680592970456576281, guid: 7484482fbc581d14a83a483648308a24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.97
+      objectReference: {fileID: 0}
     - target: {fileID: 8678984776199336750, guid: 7484482fbc581d14a83a483648308a24, type: 3}
       propertyPath: m_Name
       value: Car
@@ -290,11 +298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1194748250941275337, guid: b10a0106f341270488dbacc16126f60a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5458
+      value: 0.9746269
       objectReference: {fileID: 0}
     - target: {fileID: 1194748250941275337, guid: b10a0106f341270488dbacc16126f60a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.31
+      value: -0.0244
       objectReference: {fileID: 0}
     - target: {fileID: 1194748250941275337, guid: b10a0106f341270488dbacc16126f60a, type: 3}
       propertyPath: m_LocalPosition.y

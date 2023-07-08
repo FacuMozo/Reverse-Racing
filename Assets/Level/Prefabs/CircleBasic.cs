@@ -17,4 +17,12 @@ public class NewBehaviourScript : MonoBehaviour
     {
         transform.position = transform.position + speed * Time.deltaTime;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this);
+        }
+    }
 }

@@ -24,6 +24,23 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            switch (power)
+            {
+                case ("rocket"):
+                    break;
+                case ("heavy"):
+                    break;
+                case ("slippery"):
+                    break;
+                case ("water"):
+                    break;
+                case ("rocks"):
+                    break;
+                case ("dust"):
+                    break;
+                default:
+                    break;
+            }
             Destroy(gameObject);
         }
     }

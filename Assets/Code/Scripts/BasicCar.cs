@@ -5,7 +5,7 @@ using System;
 
 public class BasicCar : MonoBehaviour
 {
-    private float acceleration = 0f;
+    private float acceleration = 2f;
     private float deacceleration = 0.4f;
 
     // Start is called before the first frame update

@@ -966,8 +966,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Use the right and left arrows to move the tracks.
 
-    Try to catch powerups
-    while making your opponents receive the powerdowns!'
+    Catch powerups
+    and avoid the rest!'
 --- !u!222 &1205948870
 CanvasRenderer:
   m_ObjectHideFlags: 0

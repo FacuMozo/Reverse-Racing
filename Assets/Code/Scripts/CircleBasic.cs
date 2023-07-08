@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public string power;
+
     Vector3 speed = new Vector3(0.0f, -2.0f, 0.0f);
 
     // Start is called before the first frame update

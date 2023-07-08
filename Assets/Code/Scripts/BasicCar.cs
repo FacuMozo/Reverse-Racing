@@ -32,4 +32,12 @@ public class BasicCar : MonoBehaviour
     {
         acceleration += boost;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Rocks")
+        {
+            updateAcceleration(-1);
+        }
+    }
 }

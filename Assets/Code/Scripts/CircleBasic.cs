@@ -80,6 +80,7 @@ public class NewBehaviourScript : MonoBehaviour
                 case ("water"):
                     break;
                 case ("rocks"):
+                    Instantiate(rocks,new Vector3(0,5.392388f, 0), transform.rotation);
                     break;
                 case ("dust"):
                     break;

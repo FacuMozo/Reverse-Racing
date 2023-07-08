@@ -26,18 +26,6 @@ public class BasicCar : MonoBehaviour
                 acceleration = 0f;
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            acceleration += 1;
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                acceleration -= 1;
-            }
-        }
     }
 
     public void updateAcceleration(float boost)

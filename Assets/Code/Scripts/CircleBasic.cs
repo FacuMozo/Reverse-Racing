@@ -18,11 +18,13 @@ public class NewBehaviourScript : MonoBehaviour
         transform.position = transform.position + speed * Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Entro a funcion");
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(this);
+            Debug.Log("Entro a tag");
+            Destroy(gameObject);
         }
     }
 }

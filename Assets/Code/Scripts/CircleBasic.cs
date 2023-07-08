@@ -20,10 +20,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Entro a funcion");
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Entro a tag");
             Destroy(gameObject);
         }
     }

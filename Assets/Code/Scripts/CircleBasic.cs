@@ -6,23 +6,39 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public string power;
-
-    Vector3 speed = new Vector3(0.0f, -2.0f, 0.0f);
-
+    
     public bool inital = false;
 
-    Color[] colors = {Color.green,Color.red, Color.white, Color.blue, Color.yellow, Color.black}; 
-    string[] powerUps = {"rocket","heavy","slippery","water","rocks","dust" };
+    public class powerUp{
+        public string power;
+        public Color color;
+
+        public powerUp(string power, Color color){
+            this.power= power;
+            this.color = color;
+        }
+
+    }
+
+
+    powerUp[] powerUps = {
+        new powerUp("rocket", Color.red), 
+        new powerUp("heavy", Color.yellow), 
+        new powerUp("slippery", Color.green), 
+        new powerUp("water", Color.blue), 
+        new powerUp("rocks", Color.gray), 
+        new powerUp("dust", Color.black) 
+     };
+
 
     // Start is called before the first frame update
     void Start()
     {
-        int index= Random.Range(0,colors.Length);
-        int moneda= Random.Range(0,2);
-       
+        int index= Random.Range(0,powerUps.Length);
         
         // Accede al color aleatorio utilizando el índice generado
-        Color randomColor = colors[index];
+        Color randomColor = powerUps[index].color;
+        power = powerUps[index].power;
 
         // Accede al componente de material o color del objeto actual
         Renderer renderer = GetComponent<Renderer>();

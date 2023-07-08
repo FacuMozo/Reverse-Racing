@@ -21,7 +21,7 @@ public class MoveDown : MonoBehaviour
         transform.Translate(Vector3.down * Time.deltaTime * 5f);
 
         if ( transform.position.y < downBound){
-            transform.position = new Vector3(transform.position.x, 8f,0f);
+            transform.position = new Vector3(transform.position.x, 13f,0f);
         }
     }
 

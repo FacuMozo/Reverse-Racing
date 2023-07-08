@@ -6,6 +6,8 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public string power;
+
+    public GameObject rocks;
     
     public bool inital = false;
 

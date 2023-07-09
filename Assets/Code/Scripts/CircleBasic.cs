@@ -79,7 +79,7 @@ public class CircleBasic : MonoBehaviour
                     collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
                     break;
                 case ("slippery"):
-                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1.5f);
                     break;
                 case ("water"):
                     // collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject gameOverCanvas;
+    public GameObject youWinCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +22,10 @@ public class GameManager : MonoBehaviour
     public void activateGameOver()
     {
         gameOverCanvas.SetActive(true);
+    }
+
+    public void activateYouWin()
+    {
+        youWinCanvas.SetActive(true);
     }
 }

@@ -81,7 +81,7 @@ public class CircleBasic : MonoBehaviour
                     audioPowerDown.Play();
                     break;
                 case ("slippery"):
-                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1.5f);
                     audioPowerDown.Play();
                     break;
                 case ("rocks"):

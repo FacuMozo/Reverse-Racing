@@ -37,12 +37,11 @@ public class CircleBasic : MonoBehaviour
 
 
     powerUp[] powerUps = {
-        new powerUp("rocket", Color.red), 
-        new powerUp("heavy", Color.yellow), 
-        new powerUp("slippery", Color.green), 
-        new powerUp("water", Color.blue), 
-        new powerUp("rocks", Color.gray), 
-        new powerUp("dust", Color.black) 
+        new powerUp("rocket", Color.red),
+        new powerUp("heavy", Color.yellow),
+        new powerUp("slippery", Color.green),
+        //new powerUp("water", Color.blue),
+        new powerUp("rocks", Color.gray)
      };
 
 
@@ -66,17 +65,19 @@ public class CircleBasic : MonoBehaviour
             switch (power)
             {
                 case ("rocket"):
+                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(2f);
                     break;
                 case ("heavy"):
+                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
                     break;
                 case ("slippery"):
+                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
                     break;
                 case ("water"):
+                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
                     break;
                 case ("rocks"):
-                    Instantiate(rocks,new Vector3(0,5.392388f, 0), transform.rotation);
-                    break;
-                case ("dust"):
+                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
                     break;
                 default:
                     break;
@@ -90,26 +91,11 @@ public class CircleBasic : MonoBehaviour
         int index= Random.Range(0,powerUps.Length);
         gameObject.SetActive(true);
         // Accede al color aleatorio utilizando el índice generado
-        Color randomColor = powerUps[index].color;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index];
+        //Color randomColor = powerUps[index].color;
         power = powerUps[index].power;
 
         // Accede al componente de material o color del objeto actual
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            // Aplica el color aleatorio al material del objeto
-            renderer.material.color = randomColor;
-        }
-        else
-        {
-            // Si no hay un componente Renderer, intenta acceder al componente de color
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                // Aplica el color aleatorio al componente de color del objeto (sprite)
-                spriteRenderer.color = randomColor;
-            }
-        }
     }
 
     public void updatePowerUp(string powerUp){

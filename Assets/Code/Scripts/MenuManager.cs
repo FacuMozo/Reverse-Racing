@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public string sceneToLoad;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class MenuManager : MonoBehaviour
 
     public void startGame()
     {
-         SceneManager.LoadScene("Test powerups");
+         SceneManager.LoadScene(sceneToLoad);
     }
 
     public void exitGame()

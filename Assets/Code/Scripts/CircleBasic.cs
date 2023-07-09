@@ -14,6 +14,9 @@ public class CircleBasic : MonoBehaviour
 
     public Sprite[] sprites;
 
+    public AudioSource audioPowerUp;
+    public AudioSource audioPowerDown;
+
     public class powerUp{
         public string power;
         public Color color;
@@ -78,6 +81,7 @@ public class CircleBasic : MonoBehaviour
                 default:
                     break;
             }
+            audioPowerUp.Play();
             gameObject.SetActive(false);
         }
     }

@@ -8,6 +8,7 @@ public class BasicCar : MonoBehaviour
     private float acceleration = 3f;
     private float deacceleration = 1f;
     public GameObject gameManager;
+    public bool isPlayer;
 
     public ParticleSystem explosionParticle;
 
@@ -31,8 +32,20 @@ public class BasicCar : MonoBehaviour
         }
         if(transform.position.y < -5){
             if(acceleration<0){
-                gameManager.GetComponent<GameManager>().killPlayer();
-                Destroy(gameObject);
+                if(isPlayer){
+                    gameManager.GetComponent<GameManager>().activateGameOver();
+                }else{
+                    gameManager.GetComponent<GameManager>().killPlayer();
+                    Destroy(gameObject);
+                }
+            }
+        }else{
+            if(transform.position.y > 3.1){
+                if(isPlayer){
+                    gameManager.GetComponent<GameManager>().activateYouWin();
+                }else{
+                    gameManager.GetComponent<GameManager>().activateGameOver();
+                }
             }
         }
     }

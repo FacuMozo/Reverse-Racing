@@ -10,7 +10,7 @@ public class CircleBasic : MonoBehaviour
 
     public GameObject rocks;
     
-    public bool inital = false;
+    public bool inital = true;
 
     public Sprite[] sprites;
 

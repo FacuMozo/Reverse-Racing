@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gameOverCanvas;
     public GameObject youWinCanvas;
+    int cantPlayers = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,12 @@ public class GameManager : MonoBehaviour
     public void activateYouWin()
     {
         youWinCanvas.SetActive(true);
+    }
+
+    public void killPlayer(){
+        cantPlayers -= 1;
+        if(cantPlayers == 1){
+            activateYouWin();
+        }
     }
 }

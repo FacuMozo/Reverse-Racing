@@ -556,6 +556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 099aca27362cfba4cb1ac8ef98ae746e, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 358897748}
     - target: {fileID: 8678984776199336750, guid: 099aca27362cfba4cb1ac8ef98ae746e, type: 3}
       propertyPath: m_Name
       value: ENEMY CAR 2
@@ -2079,6 +2083,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 7484482fbc581d14a83a483648308a24, type: 3}
+      propertyPath: isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 7484482fbc581d14a83a483648308a24, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 358897748}
     - target: {fileID: 3680592970456576281, guid: 7484482fbc581d14a83a483648308a24, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.22
@@ -2740,6 +2752,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 0061ebfc72834844bae00c51fd5e11bb, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 358897748}
     - target: {fileID: 8678984776199336750, guid: 0061ebfc72834844bae00c51fd5e11bb, type: 3}
       propertyPath: m_Name
       value: ENEMY CAR
@@ -3942,6 +3958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 9f0708507648cdf459bce09642dfadc8, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 358897748}
     - target: {fileID: 8678984776199336750, guid: 9f0708507648cdf459bce09642dfadc8, type: 3}
       propertyPath: m_Name
       value: ENEMY CAR 1
@@ -4003,6 +4023,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 5f0f49d8d93354942b016e8e81e1fb6b, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 358897748}
     - target: {fileID: 8678984776199336750, guid: 5f0f49d8d93354942b016e8e81e1fb6b, type: 3}
       propertyPath: m_Name
       value: ENEMY CAR 3

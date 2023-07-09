@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
     public float speed;
-    private float downBound = -10;
+    private float downBound = -9.95f;
     private float speedTimerIncrease = 35f;
 
     public GameObject CircleBasic;

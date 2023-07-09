@@ -8,6 +8,8 @@ public class BasicCar : MonoBehaviour
     private float acceleration = 3f;
     private float deacceleration = 1f;
 
+    public ParticleSystem explosionParticle;
+
     // Start is called before the first frame update
     void Start()
     {

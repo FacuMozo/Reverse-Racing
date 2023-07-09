@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class CircleBasic : MonoBehaviour
 {
     public string power;
 
-    GameObject rocks;
+    public GameObject rocks;
     
     public bool inital = false;
 
@@ -47,6 +47,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Player")
         {
             switch (power)

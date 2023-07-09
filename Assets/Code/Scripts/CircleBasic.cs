@@ -67,7 +67,6 @@ public class CircleBasic : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Player")
         {
             switch (power)

@@ -51,7 +51,12 @@ public class CircleBasic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        updatePowerUp();
+        if (inital){
+            nonePowerUp();
+        }
+        else{
+            updatePowerUp();
+        }
     }
 
     // Update is called once per frame
@@ -97,6 +102,16 @@ public class CircleBasic : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index];
         //Color randomColor = powerUps[index].color;
         power = powerUps[index].power;
+
+        // Accede al componente de material o color del objeto actual
+    }
+
+    public void nonePowerUp(){
+        gameObject.SetActive(true);
+        // Accede al color aleatorio utilizando el índice generado
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = sprites[5];
+        //Color randomColor = powerUps[index].color;
+        power = powerUps[5].power;
 
         // Accede al componente de material o color del objeto actual
     }

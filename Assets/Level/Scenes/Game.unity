@@ -208,9 +208,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 60
   m_WholeNumbers: 0
-  m_Value: 30
+  m_Value: 60
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadFila (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1147442448135752454, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 28717251}
     - target: {fileID: 1147442448135752454, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
       propertyPath: roads.Array.data[0]
       value: 
@@ -1790,6 +1794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadFila (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1147442448135752454, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 28717251}
     - target: {fileID: 1158401434668539229, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
       propertyPath: inital
       value: 1
@@ -3445,6 +3453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadFila (2) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3416734878312899805, guid: 50bfc593c0ef97744abbed26e20189e4, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 28717251}
     - target: {fileID: 6442058342807789660, guid: 50bfc593c0ef97744abbed26e20189e4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3890,6 +3902,10 @@ PrefabInstance:
       value: RoadFila (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3416734878312899805, guid: 50bfc593c0ef97744abbed26e20189e4, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 28717251}
+    - target: {fileID: 3416734878312899805, guid: 50bfc593c0ef97744abbed26e20189e4, type: 3}
       propertyPath: roads.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -3982,6 +3998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadFila
       objectReference: {fileID: 0}
+    - target: {fileID: 1147442448135752454, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 28717251}
     - target: {fileID: 8782282577445080967, guid: 09767a87b16da144eb4faf6a08efe533, type: 3}
       propertyPath: m_RootOrder
       value: -1

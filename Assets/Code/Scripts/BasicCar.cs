@@ -30,7 +30,7 @@ public class BasicCar : MonoBehaviour
                 acceleration = 0f;
             }
         }
-        if(transform.position.y < -5){
+        if(transform.position.y < -6){
             if(acceleration<0){
                 if(isPlayer){
                     gameManager.GetComponent<GameManager>().activateGameOver();

@@ -24,7 +24,10 @@ public class MoveDown : MonoBehaviour
 
         if ( transform.position.y < downBound){
             transform.position = new Vector3(transform.position.x, 13f,0f);
-            CircleBasic.GetComponent<CircleBasic>().updatePowerUp();
+            if (CircleBasic != null)
+            {
+                CircleBasic.GetComponent<CircleBasic>().updatePowerUp();
+            }
         }
     }
 

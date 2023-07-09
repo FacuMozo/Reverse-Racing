@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
     public float speed;
-    private float downBound = -6;
+    private float downBound = -10;
 
     public GameObject CircleBasic;
 
@@ -23,7 +23,7 @@ public class MoveDown : MonoBehaviour
         transform.Translate(Vector3.down * Time.deltaTime * speed);
 
         if ( transform.position.y < downBound){
-            transform.position = new Vector3(transform.position.x, 13f,0f);
+            transform.position = new Vector3(transform.position.x, 9f,0f);
             if (CircleBasic != null)
             {
                 CircleBasic.GetComponent<CircleBasic>().updatePowerUp();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoadMove : MonoBehaviour
 {
@@ -9,26 +10,53 @@ public class RoadMove : MonoBehaviour
 
     private bool gameOver= false;
 
+    public float cooldown = 0f;
+    public Slider slider;
+
     // Start is called before the first frame update
     void Start()
     {
-         
+        if (slider != null)
+        {
+            slider.value = 60;
+        }
     } 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !gameOver)
+        if (cooldown <= 0f)
         {
-            switchRoadsleft();
-            // transform.Translate(new Vector3(-5,0,0));
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && !gameOver)
-        {
-            switchRoadsright();
-            // transform.Translate(new Vector3(5,0,0));
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !gameOver)
+            {
+                switchRoadsleft();
+                cooldown = .5f;
+                if (slider != null)
+                {
+                    slider.value = 0;
+                }
+                // transform.Translate(new Vector3(-5,0,0));
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && !gameOver)
+            {
+                switchRoadsright();
+                cooldown = .5f;
+                if (slider != null)
+                {
+                    slider.value = 0;
+                }
+                // transform.Translate(new Vector3(5,0,0));
+            }
         }
 
+        if (cooldown > 0f)
+        {
+            cooldown -= Time.deltaTime;
+            if (slider != null)
+            {
+                slider.value++;
+            }
+        }
        
     }
 

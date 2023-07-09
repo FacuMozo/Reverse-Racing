@@ -74,23 +74,23 @@ public class CircleBasic : MonoBehaviour
             {
                 case ("rocket"):
                     collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(2f);
+                    audioPowerUp.Play();
                     break;
                 case ("heavy"):
                     collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
+                    audioPowerDown.Play();
                     break;
                 case ("slippery"):
                     collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
-                    break;
-                case ("water"):
-                    // collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
+                    audioPowerDown.Play();
                     break;
                 case ("rocks"):
                     collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
+                    audioPowerDown.Play();
                     break;
                 default:
                     break;
             }
-            audioPowerUp.Play();
             gameObject.SetActive(false);
         }
     }

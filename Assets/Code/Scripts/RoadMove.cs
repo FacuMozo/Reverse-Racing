@@ -16,7 +16,10 @@ public class RoadMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider.value = 60;
+        if (slider != null)
+        {
+            slider.value = 60;
+        }
     } 
 
     // Update is called once per frame
@@ -28,14 +31,20 @@ public class RoadMove : MonoBehaviour
             {
                 switchRoadsleft();
                 cooldown = .5f;
-                slider.value = 0;
+                if (slider != null)
+                {
+                    slider.value = 0;
+                }
                 // transform.Translate(new Vector3(-5,0,0));
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow) && !gameOver)
             {
                 switchRoadsright();
                 cooldown = .5f;
-                slider.value = 0;
+                if (slider != null)
+                {
+                    slider.value = 0;
+                }
                 // transform.Translate(new Vector3(5,0,0));
             }
         }
@@ -43,7 +52,10 @@ public class RoadMove : MonoBehaviour
         if (cooldown > 0f)
         {
             cooldown -= Time.deltaTime;
-            slider.value++;
+            if (slider != null)
+            {
+                slider.value++;
+            }
         }
        
     }

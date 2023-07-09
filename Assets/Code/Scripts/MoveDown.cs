@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoveDown : MonoBehaviour
 {
-    public float speed = 0.005f;
-    private float downBound = -10;
+    public float speed;
+    private float downBound = -6;
 
     public GameObject CircleBasic;
 
@@ -20,7 +20,7 @@ public class MoveDown : MonoBehaviour
     {
         //Alternativa para gameover
         //if ( unit3_PlayerController.gameOver == false)
-        transform.Translate(Vector3.down * Time.deltaTime * 1f);
+        transform.Translate(Vector3.down * Time.deltaTime * speed);
 
         if ( transform.position.y < downBound){
             transform.position = new Vector3(transform.position.x, 13f,0f);

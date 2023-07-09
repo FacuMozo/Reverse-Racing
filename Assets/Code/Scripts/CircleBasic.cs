@@ -65,19 +65,19 @@ public class CircleBasic : MonoBehaviour
             switch (power)
             {
                 case ("rocket"):
-                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(2f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(2f);
                     break;
                 case ("heavy"):
-                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
                     break;
                 case ("slippery"):
-                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
                     break;
                 case ("water"):
-                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-1f);
                     break;
                 case ("rocks"):
-                    collision.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
+                    collision.transform.parent.gameObject.GetComponent<BasicCar>().updateAcceleration(-2f);
                     break;
                 default:
                     break;

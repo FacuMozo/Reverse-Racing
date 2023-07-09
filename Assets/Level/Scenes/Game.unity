@@ -1998,6 +1998,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2918771190493317036, guid: 7484482fbc581d14a83a483648308a24, type: 3}
+      propertyPath: isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2918771190493317036, guid: 7484482fbc581d14a83a483648308a24, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 358897748}

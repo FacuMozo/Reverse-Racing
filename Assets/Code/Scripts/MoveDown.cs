@@ -6,6 +6,7 @@ public class MoveDown : MonoBehaviour
 {
     public float speed;
     private float downBound = -10;
+    private float speedTimerIncrease = 35f;
 
     public GameObject CircleBasic;
 
@@ -29,6 +30,14 @@ public class MoveDown : MonoBehaviour
                 CircleBasic.GetComponent<CircleBasic>().updatePowerUp();
             }
         }
+
+        if (speedTimerIncrease <= 0f){
+            speed+= 0.2f;
+            speedTimerIncrease = 6f;
+        }else{
+            speedTimerIncrease-= Time.deltaTime;
+        }
+        
     }
 
 

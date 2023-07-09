@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI ;
 
 
 public class CircleBasic : MonoBehaviour
@@ -11,13 +12,22 @@ public class CircleBasic : MonoBehaviour
     
     public bool inital = false;
 
+    public Sprite[] sprites;
+
     public class powerUp{
         public string power;
         public Color color;
+        public Image image;
 
         public powerUp(string power, Color color){
             this.power= power;
             this.color = color;
+            
+        }
+        public powerUp(string power, Color color, Image image){
+            this.power= power;
+            this.color = color;
+            this.image = image;
         }
 
     }

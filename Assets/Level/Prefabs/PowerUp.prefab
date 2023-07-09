@@ -102,6 +102,8 @@ MonoBehaviour:
   power: 
   rocks: {fileID: 6615335720405377524, guid: 7cc62f78d03417846bbe8004d823542e, type: 3}
   inital: 0
+  sprites:
+  - {fileID: 21300000, guid: 71db540c209c70746bf63c41a07e214c, type: 3}
 --- !u!58 &5823670887096143085
 CircleCollider2D:
   m_ObjectHideFlags: 0

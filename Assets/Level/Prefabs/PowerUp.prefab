@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 
   rocks: {fileID: 6615335720405377524, guid: 7cc62f78d03417846bbe8004d823542e, type: 3}
-  inital: 0
+  inital: 1
   sprites:
   - {fileID: 21300000, guid: 9b984f523ccfbe242acb255469d1fa5e, type: 3}
   - {fileID: 21300000, guid: 8496bb531938b9944aa9c7a8a1b275c6, type: 3}

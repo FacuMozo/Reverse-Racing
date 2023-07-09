@@ -5,8 +5,8 @@ using System;
 
 public class BasicCar : MonoBehaviour
 {
-    private float acceleration = 2f;
-    private float deacceleration = 0.4f;
+    private float acceleration = 4f;
+    private float deacceleration = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +31,5 @@ public class BasicCar : MonoBehaviour
     public void updateAcceleration(float boost)
     {
         acceleration += boost;
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Rocks")
-        {
-            updateAcceleration(-1);
-        }
     }
 }

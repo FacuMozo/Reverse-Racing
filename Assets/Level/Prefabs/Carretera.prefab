@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  CircleBasic: {fileID: 9070637082561990858}
 --- !u!1 &4523490566353685059
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,5 +204,10 @@ PrefabInstance:
 --- !u!4 &3843180435154258652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1194748250941275337, guid: b10a0106f341270488dbacc16126f60a, type: 3}
+  m_PrefabInstance: {fileID: 2720491977283368469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9070637082561990858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6350147305384027871, guid: b10a0106f341270488dbacc16126f60a, type: 3}
   m_PrefabInstance: {fileID: 2720491977283368469}
   m_PrefabAsset: {fileID: 0}

@@ -6,6 +6,8 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public string power;
+
+    GameObject rocks;
     
     public bool inital = false;
 
@@ -34,29 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int index= Random.Range(0,powerUps.Length);
-        
-        // Accede al color aleatorio utilizando el índice generado
-        Color randomColor = powerUps[index].color;
-        power = powerUps[index].power;
-
-        // Accede al componente de material o color del objeto actual
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            // Aplica el color aleatorio al material del objeto
-            renderer.material.color = randomColor;
-        }
-        else
-        {
-            // Si no hay un componente Renderer, intenta acceder al componente de color
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                // Aplica el color aleatorio al componente de color del objeto (sprite)
-                spriteRenderer.color = randomColor;
-            }
-        }
+        updatePowerUp();
     }
 
     // Update is called once per frame
@@ -88,6 +68,32 @@ public class NewBehaviourScript : MonoBehaviour
                     break;
             }
             Destroy(gameObject);
+        }
+    }
+
+    public void updatePowerUp(){
+        int index= Random.Range(0,powerUps.Length);
+        
+        // Accede al color aleatorio utilizando el índice generado
+        Color randomColor = powerUps[index].color;
+        power = powerUps[index].power;
+
+        // Accede al componente de material o color del objeto actual
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            // Aplica el color aleatorio al material del objeto
+            renderer.material.color = randomColor;
+        }
+        else
+        {
+            // Si no hay un componente Renderer, intenta acceder al componente de color
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                // Aplica el color aleatorio al componente de color del objeto (sprite)
+                spriteRenderer.color = randomColor;
+            }
         }
     }
 }

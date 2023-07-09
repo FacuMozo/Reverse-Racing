@@ -7,6 +7,8 @@ public class MoveDown : MonoBehaviour
     public float speed = 0.005f;
     private float downBound = -10;
 
+    public GameObject CircleBasic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class MoveDown : MonoBehaviour
 
         if ( transform.position.y < downBound){
             transform.position = new Vector3(transform.position.x, 13f,0f);
+            CircleBasic.GetComponent<CircleBasic>().updatePowerUp();
         }
     }
 

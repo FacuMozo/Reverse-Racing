@@ -20,7 +20,7 @@ public class MoveDown : MonoBehaviour
     {
         //Alternativa para gameover
         //if ( unit3_PlayerController.gameOver == false)
-        transform.Translate(Vector3.down * Time.deltaTime * 5f);
+        transform.Translate(Vector3.down * Time.deltaTime * 1f);
 
         if ( transform.position.y < downBound){
             transform.position = new Vector3(transform.position.x, 13f,0f);

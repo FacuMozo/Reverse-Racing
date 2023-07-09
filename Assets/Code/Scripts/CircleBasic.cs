@@ -68,11 +68,37 @@ public class CircleBasic : MonoBehaviour
                 default:
                     break;
             }
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
     public void updatePowerUp(){
+        int index= Random.Range(0,powerUps.Length);
+        gameObject.SetActive(true);
+        // Accede al color aleatorio utilizando el índice generado
+        Color randomColor = powerUps[index].color;
+        power = powerUps[index].power;
+
+        // Accede al componente de material o color del objeto actual
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            // Aplica el color aleatorio al material del objeto
+            renderer.material.color = randomColor;
+        }
+        else
+        {
+            // Si no hay un componente Renderer, intenta acceder al componente de color
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                // Aplica el color aleatorio al componente de color del objeto (sprite)
+                spriteRenderer.color = randomColor;
+            }
+        }
+    }
+
+    public void updatePowerUp(string powerUp){
         int index= Random.Range(0,powerUps.Length);
         
         // Accede al color aleatorio utilizando el índice generado

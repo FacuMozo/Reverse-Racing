@@ -30,7 +30,7 @@ public class RoadMove : MonoBehaviour
     {
         if (cooldown <= 0f)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && !gameOver)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) )
             {
                 switchRoadsleft();
                 cooldown = .5f;
@@ -40,7 +40,7 @@ public class RoadMove : MonoBehaviour
                 }
                 // transform.Translate(new Vector3(-5,0,0));
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && !gameOver)
+            else if (Input.GetKeyDown(KeyCode.RightArrow) )
             {
                 switchRoadsright();
                 cooldown = .5f;

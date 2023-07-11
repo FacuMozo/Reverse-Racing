@@ -24,7 +24,7 @@ public class MoveDown : MonoBehaviour
         transform.Translate(Vector3.down * Time.deltaTime * speed);
 
         if ( transform.position.y < downBound){
-            transform.position = new Vector3(transform.position.x, 9f,0f);
+            transform.position = new Vector3(transform.position.x, 37f,0f);
             if (CircleBasic != null)
             {
                 CircleBasic.GetComponent<CircleBasic>().updatePowerUp();

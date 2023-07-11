@@ -13,6 +13,8 @@ public class RoadMove : MonoBehaviour
     public float cooldown = 0f;
     public Slider slider;
 
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class RoadMove : MonoBehaviour
         {
             slider.value = 60;
         }
+      
     } 
 
     // Update is called once per frame
@@ -65,9 +68,19 @@ public class RoadMove : MonoBehaviour
         for (int i = roads.Length-1; i > -1; i--)
         {
             if (i > 0){
-                roads[i].transform.position = roads[i-1].transform.position;
+                roads[i].transform.position = new Vector3 (roads[i-1].transform.position.x + 2, roads[i-1].transform.position.y,roads[i-1].transform.position.z) ;
+                // roads[i].transform.Translate(new Vector3(-2f,0f,0f));
+                StartCoroutine(moveroad(0.1f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.2f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.3f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.4f,roads[i], new Vector3(-0.5f,0,0)));
             }else{
-                roads[i].transform.position = finalPosition;
+                roads[i].transform.position = new Vector3(finalPosition.x + 2, finalPosition.y,finalPosition.z) ;
+                StartCoroutine(moveroad(0.1f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.2f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.3f,roads[i], new Vector3(-0.5f,0,0)));
+                StartCoroutine(moveroad(0.4f,roads[i], new Vector3(-0.5f,0,0)));
+                
             }
         }
     }
@@ -76,11 +89,27 @@ public class RoadMove : MonoBehaviour
         for (int i = 0; i  < roads.Length; i++)
         {
             if (i != roads.Length-1){
-                roads[i].transform.position = roads[i+1].transform.position;
+                // roads[i].transform.position = roads[i+1].transform.position;
+                roads[i].transform.position = new Vector3 (roads[i+1].transform.position.x - 2, roads[i+1].transform.position.y,roads[i+1].transform.position.z) ;
+                StartCoroutine(moveroad(0.1f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.2f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.3f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.4f,roads[i], new Vector3(0.5f,0,0)));
             }else{
-                roads[i].transform.position = initialPosition;
+                // roads[i].transform.position = initialPosition;
+                roads[i].transform.position = new Vector3(initialPosition.x - 2, initialPosition.y,initialPosition.z) ;
+                StartCoroutine(moveroad(0.1f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.2f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.3f,roads[i], new Vector3(0.5f,0,0)));
+                StartCoroutine(moveroad(0.4f,roads[i], new Vector3(0.5f,0,0)));
             }
         }
+    }
+
+    IEnumerator  moveroad(float delayTime, GameObject road, Vector3 move){
+        yield return new WaitForSeconds(delayTime);
+
+        road.transform.Translate(move) ;
     }
 
 
